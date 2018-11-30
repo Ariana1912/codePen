@@ -1,0 +1,181 @@
+@charset "utf-8";
+/* CSS Document */
+
+html,body{
+  overflow:hidden;/*隐藏溢出*/
+  height:100%;/*高度自适应*/
+}
+html{
+  font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+  line-height:1.5;
+  font-size: 15px;
+  font-weight: 400;/*字粗normal，700：bold*/
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*设置了之后可以不考虑padding*/
+}
+
+/*body*/
+.fullpage{
+    min-width: 0;
+    padding-bottom:0px;
+}/*确认页面内容结束的地方就是页面结束的地方*/
+body{
+  margin:0;
+  color:white;
+}/*body占据浏览器页面*/
+a{
+	text-decoration:none;
+	color:#FFF;
+}
+a:hover,a:active,a:focus{
+	color:white;
+	cursor:pointer;
+}
+.pen-title-area .freecodecamp:hover{
+	opacity:0.8;
+}
+
+svg{
+	width:16px;
+	height:16px;
+	vertical-align:bottom;/*底部对齐。*/
+	display:inline-block;/*变为行内块元素，方便对齐*/
+	pointer-events:none;
+}
+
+.fullpage .main-header {   /*？？？*/
+    min-width: 0;
+}
+/*页眉盒子*/
+.main-header{
+  height:69px;
+  min-height:69px;
+  border-bottom:5px solid #333333;
+  box-shadow:0px 1px 1px black;/*盒子的阴影*/
+  
+  background:black;
+  display:flex;/*新布局，内部元素自动变为flex*/
+  position: relative;/**/
+
+}
+
+/*左边*/
+.pen-title-area{
+	padding: 10px 15px 0 15px;
+	-webkit-flex-shrink: 1;
+	-ms-flex-negative: 1;
+	flex-shrink: 1;/
+	-webkit-flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;/*默认为0，此处可放大*/
+	min-width: 0;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+/*左边图标*/
+.icon-codepen-box{
+	width:25px;
+	height:25px;
+	margin-right:10px;
+	fill:white;
+}
+/*左边的文字*/
+.pen-title-area .pen-title-text{
+	width:100%;
+}
+.pen-title-area .pen-title{
+	font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+	width: 100%;
+	font-size: 1.3rem;
+	margin: 0 0 1px 0;
+}
+.pen-title-area .by {
+	color: #9396A4;
+	font-size: 0.7rem;
+	letter-spacing: 1px;
+    overflow: hidden;
+    white-space: nowrap; 	/*文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。*/
+    text-overflow: ellipsis;/*clip:当前对象内文本溢出时不显示省略标记(...),而是将溢出部分裁剪。ellipsis:当对象内文本一处时显示省略标记(...)。*/
+    text-transform: uppercase;
+}
+.pen-title-area .by .freecodecamp{
+	color:white;
+	text-transform:none;
+	letter-spacing:0;
+	font-size:0.9rem;
+}
+.freecodecamp{
+    transition: opacity 200ms;
+	text-decoration:none; 
+}
+/*页眉按钮*/
+.header-actions{
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;/*从右向左开始排列*/
+	-webkit-flex-shrink: 0;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;/*项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。此处不能缩小*/
+	-ms-flex-positive: 0;
+	-webkit-flex-grow: 0;
+	flex-grow: 0;/*不能放大，默认为0*/
+	
+}
+button{
+	align-self:center;
+}
+.button{
+	font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+    -webkit-appearance: none;
+    font-size: 1rem;
+    text-shadow: none;
+    line-height: 1.2;
+    display: inline-block;
+    padding: 10px 16px;
+    margin: 0 10px 0 0;
+    position: relative;
+    border-radius: 3px;
+    border: 3px solid transparent;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-decoration: none !important;
+    text-align: center;
+    font-weight: normal !important;
+}
+.love .icon-heart{
+	color:#999;
+	fill:#999;!important
+	transform: scale(1) translateY(0);
+}
+.button-editor-outline{
+	background:none;
+	border:3px solid #666;
+	border-radius:2px;
+}
+.button-editor-outline:not(.love) svg{
+    margin-right: 3px;
+    fill: #adafbc;
+}
+.button-editor-outline:hover{
+	background-color:#999;
+}
+#mainframe{
+	height: calc(100% - 82px);
+}
+#result {
+    border: 0;
+    width: 100%;
+    height:100%;
+    display: block;
+    position: static;
+}
